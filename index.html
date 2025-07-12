@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Hypergraph Visualizer</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+<div id="ui">
+    <h2>Hypergraph Visualizer</h2>
+    <div class="input-group">
+      <label for="nodeLabels">Node Labels (.txt)</label>
+      <input type="file" id="nodeLabels" accept=".txt" />
+    </div>
+    <div class="input-group">
+      <label for="labelNames">Label Names (.txt)</label>
+      <input type="file" id="labelNames" accept=".txt" />
+    </div>
+    <div class="input-group">
+      <label for="hyperedges">Hyperedges (.txt)</label>
+      <input type="file" id="hyperedges" accept=".txt" />
+    </div>
+    <div class="button-group">
+      <button id="renderBtn">Render Graph</button>
+      <button id="loadSampleBtn">Load Sample</button>
+    </div>
+    <div id="infoBox">
+      <h3>Welcome</h3>
+      <p>Upload your hypergraph data files or try the sample dataset to get started.</p>
+    </div>
+  </div>
+  
+  <div id="graphContainer"></div>
+  
+  <div class="controls-info">
+    <h4>Controls</h4>
+    <ul>
+      <li><span class="key">Mouse Wheel</span> Zoom in/out</li>
+      <li><span class="key">Click + Drag</span> Pan view</li>
+      <li><span class="key">Ctrl + R</span> Reset view</li>
+      <li><span class="key">Ctrl + F</span> Fit to view</li>
+      <li><span class="key">Hover</span> Node info</li>
+    </ul>
+  </div>
+  
+  <div class="stats-panel" id="statsPanel" style="display: none;">
+    <h4>Graph Statistics</h4>
+    <div class="stat-item">
+      <span>Nodes:</span>
+      <span class="stat-value" id="nodeCount">0</span>
+    </div>
+    <div class="stat-item">
+      <span>Hyperedges:</span>
+      <span class="stat-value" id="edgeCount">0</span>
+    </div>
+    <div class="stat-item">
+      <span>Zoom:</span>
+      <span class="stat-value" id="zoomLevel">100%</span>
+    </div>
+  </div>
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>
+
