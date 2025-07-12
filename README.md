@@ -1,6 +1,6 @@
 # Hypergraph Visualizer
 
-An interactive 3D visualization tool for hypergraphs using TypeScript and Three.js.
+An interactive 2D visualization tool for hypergraphs using TypeScript and the Canvas API.
 
 ## Dataset Format
 
